@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="university" class="com.nit.spring.UniverSity">
+    <property name ="name">
+    <list>
+    <value>Brijesh</value>
+    <value>Mahesh</value>
+    <value>Gopal</value>
+    </list>
+    </property>
+    
+    <property name ="subjects">
+    <set>
+    <value>SpringCore</value>
+    <value>Advanced Java</value>
+    <value>Docker</value>
+    <value>KuberNate</value>
+    </set>
+    </property>
+    
+    <property name="dept">
+    <map>
+    <entry key="CSE" value="101"></entry>
+    <entry key="Mechanical" value="102"></entry>
+    <entry key="Civil" value="103"></entry>
+    </map>
+    </property>
+    </bean>
+</beans>

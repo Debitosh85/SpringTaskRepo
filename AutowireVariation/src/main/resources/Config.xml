@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="CreditCardPayment" class="com.nit.spring.CreditCardPayment" />
+    <bean id="paymentService" class="com.nit.spring.UpiPayments"></bean>
+ 
+  
+   <bean id="Chekout"  class="com.nit.spring.CheckoutService" autowire="byName"></bean>
+
+</beans>
