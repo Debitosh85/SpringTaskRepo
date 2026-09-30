@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Products -->
+    <bean id="Laptop" class="com.nit.spring.Product">
+        <constructor-arg value="1212"/>
+        <constructor-arg value="Dell"/>
+        <constructor-arg value="10000"/>
+    </bean>
+
+    <bean id="Mobile" class="com.nit.spring.Product">
+        <constructor-arg value="424242"/>
+        <constructor-arg value="Sony X Peria"/>
+        <constructor-arg value="30000"/>
+    </bean>
+
+    <!-- CartItems -->
+    <bean id="CartItem1" class="com.nit.spring.CartItem">
+        <constructor-arg ref="Laptop"/>
+        <constructor-arg value="2"/>
+    </bean>
+    
+   <bean id="CartItem2" class="com.nit.spring.CartItem">
+        <constructor-arg ref="Mobile"/>
+        <constructor-arg value="4"/>
+    </bean>
+    
+
+    <!-- Cart -->
+    <bean id="Cart" class="com.nit.spring.Cart">
+        <constructor-arg>
+            <list>
+                <ref bean="CartItem1"/>
+                <ref bean="CartItem2"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <!-- Checkout Service -->
+    <bean id="checkoutService" class="com.nit.spring.CheckoutService">
+        <constructor-arg ref="Cart"/>
+        <constructor-arg value="25"/>
+    </bean>
+
+</beans>

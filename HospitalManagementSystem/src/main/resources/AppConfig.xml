@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean id="Doctor" class="com.nit.spring.Doctor">
+   <constructor-arg value="111"></constructor-arg>
+   <constructor-arg value="Srikant Sahoo"></constructor-arg>
+   <constructor-arg value="Neurologist"></constructor-arg>
+   </bean>
+   
+   <bean id="Patient" class="com.nit.spring.Patient">
+   <constructor-arg value="222"></constructor-arg>
+   <constructor-arg value="Debitosh"></constructor-arg>
+   <constructor-arg value="Footdrop"></constructor-arg>
+   </bean>
+   
+   <bean id="Billing" class="com.nit.spring.Billing">
+   <constructor-arg value="2000"> </constructor-arg>
+   <constructor-arg value="5000"></constructor-arg>
+   <constructor-arg value="10000"></constructor-arg>
+   </bean>
+   
+   <bean id="HospitalService" class="com.nit.spring.HospitalService">
+   <constructor-arg ref="Doctor"></constructor-arg>
+   <constructor-arg ref="Patient"></constructor-arg>
+   <constructor-arg ref="Billing"></constructor-arg>
+   </bean>
+</beans>

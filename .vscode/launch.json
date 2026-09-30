@@ -2,6 +2,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "BeanInsideBeanApplication",
+      "request": "launch",
+      "mainClass": "com.nit.spring.BeanInsideBeanApplication",
+      "projectName": "BeanInsideBean"
+    },
+    {
+      "type": "java",
+      "name": "BookRepositoryApplication",
+      "request": "launch",
+      "mainClass": "com.nit.spring.BookRepositoryApplication",
+      "projectName": "BookRepository"
+    },
+    {
+      "type": "java",
+      "name": "ListInjectionApplication",
+      "request": "launch",
+      "mainClass": "com.nit.spring.ListInjectionApplication",
+      "projectName": "ListInjection"
+    },
+    {
+      "type": "java",
       "name": "Spring Boot-CarandEngineInjectionApplication<CarandEngineInjection>",
       "request": "launch",
       "cwd": "${workspaceFolder}",

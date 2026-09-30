@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean id="Student" class="com.nit.spring.Student">
+   <property name="id"  value="111"></property>
+   <property name="name" value="Subham"></property>
+   <property name="course" value="FullStack Java"></property>
+   <property name="marks">
+   <list>
+   <value>70</value>
+   <value>80</value>
+   <value>75</value>
+   <value>65</value>
+   <value>45</value>
+   <value>60</value>
+   </list>
+   </property>
+   </bean>
+   
+   <bean id="ResultCalcuLator" class="com.nit.spring.ResultCalcuLator">
+   <property name="info" ref="Student"></property>
+   </bean>
+   
+   <bean id="GradeNotifier" class="com.nit.spring.GradeNotifier">
+   <property name="result" ref="ResultCalcuLator"></property>
+   </bean>
+</beans>

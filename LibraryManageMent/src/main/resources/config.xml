@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean id ="Author" class="com.nit.spring.Author">
+   <constructor-arg value="12453535"></constructor-arg>
+   <constructor-arg value="jacob bloach"></constructor-arg>
+   </bean>
+   
+   <bean id="Book" class="com.nit.spring.Book">
+   <property name="bookId" value="125777"></property>
+   <property name="bookName" value="EffectiveJava"></property>
+   <property name="price" value="750.00"></property>
+   <property name="author" ref="Author"></property>
+   </bean>
+   
+   <bean id="LibaryService" class="com.nit.spring.LibraryService">
+   <property name="book"  ref="Book"></property>
+   </bean>
+</beans>

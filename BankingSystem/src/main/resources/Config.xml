@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="Bankinfo" class="com.nit.spring.BankInfo">
+    <constructor-arg value="153653653636"></constructor-arg>
+    <constructor-arg value="Saving"></constructor-arg>
+    </bean>
+    
+    <bean id="Customer" class="com.nit.spring.Customer">
+    
+    <property name="name" value="Ramesh"></property>
+    
+    <property name ="customerId" value="1012"></property>
+    
+    <property name="account">
+    <list>
+    <ref bean="Bankinfo"/>
+    </list>
+    </property>
+    </bean>
+    
+    <bean id="BankService" class="com.nit.spring.BankService">
+    <property name="cust" ref="Customer"></property>
+    </bean>
+
+</beans>

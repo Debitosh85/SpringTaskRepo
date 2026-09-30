@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean id="Account" class="com.nit.spring.Account">
+   <property name="accountNo" value="1253344543432"></property>
+   <property name="holderName" value="Debitosh"></property>
+   <property name="balance"  value="0"></property>
+   </bean>
+   
+   <bean id="IntrestCalculator" class="com.nit.spring.IntrestCalculator">
+   <property name="rate" value="5"></property>
+   </bean>
+   
+   <bean id="TransactionManagerBean" class="com.nit.spring.TransactionManagerBean">
+   <property name="acc" ref="Account"></property>
+   <property name="calc" ref="IntrestCalculator"></property>
+   </bean>
+
+</beans>
